@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:binding="http://www.gueei.com/android-binding/"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="30dip"
+    android:paddingRight="30dip"
+    android:background="#fff"
+    binding:background="Wallpaper"
+    binding:animation="AFTERCOMMAND(IF(Passed,@anim/nod,@anim/shake),Verify)"
+    >
+    <LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+    >
+	    <TextView
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:textColor="#333"
+		    android:textSize="20dip"
+		    android:text="This application is blocked by AppLocker. Please Enter password to unlock it (Default: 1234)"
+		    />
+		<TextView
+			android:layout_width="fill_parent"
+		    android:layout_height="50dip"
+		    android:gravity="center"
+		    android:password="true"
+		    android:textSize="30dip"
+		    android:textColor="#333"
+		    android:maxLines="1"
+		    android:ellipsize="end"
+		    binding:text="Password"
+			/>
+		<TableLayout
+		 	android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="1"
+		    android:stretchColumns="0,1,2"
+		>
+			<TableRow>
+				<Button android:text="7" binding:onClick="ARG(Number,7)" style="@style/CodeFont"/>
+				<Button android:text="8" binding:onClick="ARG(Number,8)" style="@style/CodeFont"/>
+				<Button android:text="9" binding:onClick="ARG(Number,9)" style="@style/CodeFont"/>
+			</TableRow>
+			<TableRow>
+				<Button android:text="4" binding:onClick="ARG(Number,4)" style="@style/CodeFont"/>
+				<Button android:text="5" binding:onClick="ARG(Number,5)" style="@style/CodeFont"/>
+				<Button android:text="6" binding:onClick="ARG(Number,6)" style="@style/CodeFont"/>
+			</TableRow>
+			<TableRow>
+				<Button android:text="1" binding:onClick="ARG(Number,1)" style="@style/CodeFont"/>
+				<Button android:text="2" binding:onClick="ARG(Number,2)" style="@style/CodeFont"/>
+				<Button android:text="3" binding:onClick="ARG(Number,3)" style="@style/CodeFont"/>
+			</TableRow>
+			<TableRow>
+				<Button android:text="C" binding:onClick="Clear" style="@style/CodeFont"/>
+				<Button android:text="0" binding:onClick="ARG(Number,0)" style="@style/CodeFont"/>
+				<ImageButton android:layout_width="30dip" binding:onClick="Verify" style="@style/CodeFont"
+					android:src="@drawable/unlock" 
+				/>
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+</LinearLayout>

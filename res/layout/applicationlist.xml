@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:binding="http://www.gueei.com/android-binding/"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <GridView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1"
+	    android:numColumns="3"
+	    android:stretchMode="columnWidth"
+	    android:horizontalSpacing="20dip"
+	    android:verticalSpacing="20dip"
+	    binding:itemSource="Applications"
+	    binding:itemTemplate="@layout/applicationlist_item"/>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		>
+		<Button
+			android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+			android:text="Defaults"
+			binding:onClick="SelectAllImportant"
+		/>
+		<Button
+			android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+			android:text="Block All"
+			binding:onClick="SelectAll"
+		/>
+		<Button
+			android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+			android:text="Allow All"
+			binding:onClick="DeselectAll"
+		/>
+	</LinearLayout>
+</LinearLayout>

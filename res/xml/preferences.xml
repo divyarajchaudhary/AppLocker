@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:title="Enable AppLocker">
+        <CheckBoxPreference
+                android:key="service_enabled"
+                android:title="AppLocker service"
+                android:summaryOn="AppLocker running"
+                android:summaryOff="AppLocker disabled" />
+		<CheckBoxPreference
+    		android:key="start_service_after_boot"
+    		android:title="Auto Start Service"
+    		android:dependency="service_enabled"
+    		android:summaryOn="Auto enable AppLocker after reboot"
+    		android:summaryOff="Manually startup service after reboot"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+    	android:title="General">
+    	<EditTextPreference
+    		android:key="password"
+    		android:title="Edit Password"
+    		android:summary="Edit the Unlock password"
+    		android:inputType="number"
+    	/>
+    	<CheckBoxPreference
+    		android:key="relock_policy"
+    		android:title="Relock Policy"
+    		android:summaryOn="Password is not required after unlocking for a period of time"
+    		android:summaryOff="Require password everytime the blocked app is launched."/>
+		<ListPreference
+			android:key="relock_timeout"
+			android:title="Relock timeout"
+			android:summary="Minutes of time before the app is relocked"
+			android:dependency="relock_policy"
+			android:entries="@array/relock_timeout_entries"
+			android:entryValues="@array/relock_timeout_values"
+			android:dialogTitle="Relock Timeout"
+			/>
+    </PreferenceCategory>
+</PreferenceScreen>

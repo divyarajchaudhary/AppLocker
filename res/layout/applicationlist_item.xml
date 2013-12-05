@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="80dip"
+    android:layout_height="80dip"
+    android:padding="5dip"
+    binding:background="IF(Included, @drawable/applicationlist_item_selected, 0)"
+    binding:onClick="ToggleIncluded"
+    >
+    <ImageView
+    	android:layout_width="40dip"
+    	android:layout_height="40dip"
+    	android:scaleType="fitCenter"
+    	android:layout_gravity="center_horizontal"
+    	binding:source="Icon"
+   	/>
+    <ImageView
+    	android:layout_width="30dip"
+    	android:layout_height="30dip"
+    	android:scaleType="fitCenter"
+    	android:layout_gravity="right"
+    	android:src="@drawable/important"
+    	binding:visibility="Important"
+    />
+   	<TextView
+   		android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="bottom"
+    	android:gravity="center"
+    	android:textSize="12dip"
+    	android:maxLines="2"
+    	android:ellipsize="marquee"
+    	binding:text="Label"
+   	/>
+</FrameLayout>

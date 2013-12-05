@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:binding="http://www.gueei.com/android-binding/"
+	android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    binding:tabs="TAB(
+    				{tag='1', activity='com.gueei.applocker.AppLockerPreferenceActivity', label='Preference'},
+    				{tag='2', activity='com.gueei.applocker.ApplicationListActivity', label='Black List'}
+    			)"
+    >
+	<LinearLayout
+	    android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical">
+    	<TabWidget 
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:id="@android:id/tabs"
+    		/>
+    	<FrameLayout
+    		android:id="@android:id/tabcontent"
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent" />
+    </LinearLayout>
+</TabHost>

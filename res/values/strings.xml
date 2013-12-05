@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AppLockerActivity!</string>
+    <string name="app_name">AppLocker</string>
+    <string name="appLockerPreferenceActivityName">App Locker Preference</string>
+    <string name="service_running">Service is Running</string>
+</resources>
